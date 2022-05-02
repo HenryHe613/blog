@@ -9,7 +9,7 @@
     <meta name="description" content="利用Coding部署Hexo前言之前看到CYF在博客写了利用Travis-CI实现在线更新Hexo 想到我也要高中去了&#x2F;滑稽脸，我也试了一下Travis-CI。但是可能我技术不到家，次次都失败，英文界面也看得我头大。 后来在Coding里面看见了持续集成，心里一动，说不定这玩意儿还真行。 上传Hexo源文件到Coding参考我之前的文章吧，我都懒得复制了传送门，不过那篇我也没写完&amp;#x2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用Coding部署Hexo">
-<meta property="og:url" content="https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/">
+<meta property="og:url" content="https://blog.nanyan666.com/posts/7fe9">
 <meta property="og:site_name" content="南岩666のBlog">
 <meta property="og:description" content="利用Coding部署Hexo前言之前看到CYF在博客写了利用Travis-CI实现在线更新Hexo 想到我也要高中去了&#x2F;滑稽脸，我也试了一下Travis-CI。但是可能我技术不到家，次次都失败，英文界面也看得我头大。 后来在Coding里面看见了持续集成，心里一动，说不定这玩意儿还真行。 上传Hexo源文件到Coding参考我之前的文章吧，我都懒得复制了传送门，不过那篇我也没写完&amp;#x2">
 <meta property="og:locale" content="zh_CN">
@@ -88,10 +88,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="上一篇" href="/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/posts/dd57"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="下一篇" href="/2020/07/10/Matery%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Artitalk/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/posts/879a"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -104,17 +104,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&text=利用Coding部署Hexo"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&is_video=false&description=利用Coding部署Hexo"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=利用Coding部署Hexo&body=Check out this article: https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&name=利用Coding部署Hexo&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&t=利用Coding部署Hexo"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/7fe9"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/7fe9&text=利用Coding部署Hexo"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/7fe9&is_video=false&description=利用Coding部署Hexo"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=利用Coding部署Hexo&body=Check out this article: https://blog.nanyan666.com/posts/7fe9"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/7fe9&name=利用Coding部署Hexo&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/7fe9&t=利用Coding部署Hexo"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -237,17 +237,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&text=利用Coding部署Hexo"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&is_video=false&description=利用Coding部署Hexo"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=利用Coding部署Hexo&body=Check out this article: https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&title=利用Coding部署Hexo"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&name=利用Coding部署Hexo&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/&t=利用Coding部署Hexo"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/7fe9"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/7fe9&text=利用Coding部署Hexo"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/7fe9&is_video=false&description=利用Coding部署Hexo"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=利用Coding部署Hexo&body=Check out this article: https://blog.nanyan666.com/posts/7fe9"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/7fe9&title=利用Coding部署Hexo"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/7fe9&name=利用Coding部署Hexo&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/7fe9&t=利用Coding部署Hexo"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>

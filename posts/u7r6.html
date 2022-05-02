@@ -9,7 +9,7 @@
     <meta name="description" content="获取微软应用程序的API有时候微软应用程序API获取的时候会抽，半天没反应。 这时需要手动到Azure获取应用机密和应用ID。 打开https:&#x2F;&#x2F;portal.azure.com&#x2F;，登录你的微软账号。 登录完成后，可以看到如下界面，选择管理 Azure Active Directory 。  选择左边的应用注册，并注册新应用。  写好应用名称，方便以后管理应用。并填写URI，以便验证身份后进行重">
 <meta property="og:type" content="article">
 <meta property="og:title" content="获取微软应用程序的API">
-<meta property="og:url" content="https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/">
+<meta property="og:url" content="https://blog.nanyan666.com/posts/u7r6">
 <meta property="og:site_name" content="南岩666のBlog">
 <meta property="og:description" content="获取微软应用程序的API有时候微软应用程序API获取的时候会抽，半天没反应。 这时需要手动到Azure获取应用机密和应用ID。 打开https:&#x2F;&#x2F;portal.azure.com&#x2F;，登录你的微软账号。 登录完成后，可以看到如下界面，选择管理 Azure Active Directory 。  选择左边的应用注册，并注册新应用。  写好应用名称，方便以后管理应用。并填写URI，以便验证身份后进行重">
 <meta property="og:locale" content="zh_CN">
@@ -87,10 +87,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="上一篇" href="/2020/07/10/Matery%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Artitalk/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/posts/879a"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="下一篇" href="/2020/06/16/%E6%9B%B4%E6%8D%A2%E8%AE%BE%E5%A4%87%E7%BB%A7%E7%BB%ADHexo/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/posts/58"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -103,17 +103,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&text=获取微软应用程序的API"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&is_video=false&description=获取微软应用程序的API"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=获取微软应用程序的API&body=Check out this article: https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&name=获取微软应用程序的API&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&t=获取微软应用程序的API"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/u7r6"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/u7r6&text=获取微软应用程序的API"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/u7r6&is_video=false&description=获取微软应用程序的API"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=获取微软应用程序的API&body=Check out this article: https://blog.nanyan666.com/posts/u7r6"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/u7r6&name=获取微软应用程序的API&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/u7r6&t=获取微软应用程序的API"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -221,17 +221,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&text=获取微软应用程序的API"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&is_video=false&description=获取微软应用程序的API"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=获取微软应用程序的API&body=Check out this article: https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&title=获取微软应用程序的API"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&name=获取微软应用程序的API&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/07/08/%E5%BE%AE%E8%BD%AFAPI%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96/&t=获取微软应用程序的API"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/u7r6"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/u7r6&text=获取微软应用程序的API"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/u7r6&is_video=false&description=获取微软应用程序的API"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=获取微软应用程序的API&body=Check out this article: https://blog.nanyan666.com/posts/u7r6"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/u7r6&title=获取微软应用程序的API"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/u7r6&name=获取微软应用程序的API&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/u7r6&t=获取微软应用程序的API"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>

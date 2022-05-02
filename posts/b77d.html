@@ -9,7 +9,7 @@
     <meta name="description" content="VSCode更改中文前提是你得安装了VSCode。下载地址：传送门 最好是下载Stable版本的，Insiders版的可能会不稳定 安装好之后应该是英文的。网上的方法可能有点不适用，我介绍一下我的方法。 下载Chinese插件。传送门  在右侧点击Download Extension，下载VSIX扩展文件（类似Chromium的CRX）。 在VSCode插件栏中，右上角···，选择从VSIX安装，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VSCode更改中文和更改字体">
-<meta property="og:url" content="https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/">
+<meta property="og:url" content="https://blog.nanyan666.com/posts/b77d">
 <meta property="og:site_name" content="南岩666のBlog">
 <meta property="og:description" content="VSCode更改中文前提是你得安装了VSCode。下载地址：传送门 最好是下载Stable版本的，Insiders版的可能会不稳定 安装好之后应该是英文的。网上的方法可能有点不适用，我介绍一下我的方法。 下载Chinese插件。传送门  在右侧点击Download Extension，下载VSIX扩展文件（类似Chromium的CRX）。 在VSCode插件栏中，右上角···，选择从VSIX安装，">
 <meta property="og:locale" content="zh_CN">
@@ -80,10 +80,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="上一篇" href="/2020/06/06/Hexo%E9%93%BE%E6%8E%A5%E4%BC%98%E5%8C%96/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/posts/876"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="下一篇" href="/2020/05/24/%E5%8E%BB%E6%8E%89Chromium%E7%9A%84%E7%A6%81%E7%94%A8%E5%BC%80%E5%8F%91%E8%80%85%E6%89%A9%E5%B1%95%E6%8F%90%E7%A4%BA/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/posts/7653"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -96,17 +96,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&text=VSCode更改中文和更改字体"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&is_video=false&description=VSCode更改中文和更改字体"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=VSCode更改中文和更改字体&body=Check out this article: https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&name=VSCode更改中文和更改字体&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&t=VSCode更改中文和更改字体"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/b77d"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/b77d&text=VSCode更改中文和更改字体"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/b77d&is_video=false&description=VSCode更改中文和更改字体"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VSCode更改中文和更改字体&body=Check out this article: https://blog.nanyan666.com/posts/b77d"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/b77d&name=VSCode更改中文和更改字体&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/b77d&t=VSCode更改中文和更改字体"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -230,17 +230,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&text=VSCode更改中文和更改字体"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&is_video=false&description=VSCode更改中文和更改字体"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=VSCode更改中文和更改字体&body=Check out this article: https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&name=VSCode更改中文和更改字体&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&t=VSCode更改中文和更改字体"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/b77d"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/b77d&text=VSCode更改中文和更改字体"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/b77d&is_video=false&description=VSCode更改中文和更改字体"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VSCode更改中文和更改字体&body=Check out this article: https://blog.nanyan666.com/posts/b77d"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/b77d&title=VSCode更改中文和更改字体"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/b77d&name=VSCode更改中文和更改字体&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/b77d&t=VSCode更改中文和更改字体"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
