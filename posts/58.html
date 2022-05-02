@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。push到代码托管平台  注意* 我这里源文件托管选择了Coding，网站还在Github上。毕竟国内速度好一点。  还有，这篇文章是写给像我一样的Git小白的。如果是大佬就不用浪费宝贵时间了。如果有什么不对支持，还请提出让我改正。  注册Coding账号现在Coding改版了，加了个什么~~~辣鸡~~~团队的东西，有点不舒服。 p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="更换设备继续Hexo">
+<meta property="og:url" content="https://blog.nanyan666.com/posts/58.html">
+<meta property="og:site_name" content="南岩666のBlog">
+<meta property="og:description" content="一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。push到代码托管平台  注意* 我这里源文件托管选择了Coding，网站还在Github上。毕竟国内速度好一点。  还有，这篇文章是写给像我一样的Git小白的。如果是大佬就不用浪费宝贵时间了。如果有什么不对支持，还请提出让我改正。  注册Coding账号现在Coding改版了，加了个什么~~~辣鸡~~~团队的东西，有点不舒服。 p">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/26/aC2kAe.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/26/aC23NQ.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/35f9862168f9d.png">
+<meta property="article:published_time" content="2020-06-16T15:05:12.000Z">
+<meta property="article:modified_time" content="2022-05-01T12:17:25.005Z">
+<meta property="article:author" content="南岩666">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/26/aC2kAe.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+    
+    <!-- title -->
+    <title>更换设备继续Hexo</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="الأعلى" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">主页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/posts/u7r6.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/876.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/58.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/58.html&text=更换设备继续Hexo"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/58.html&is_video=false&description=更换设备继续Hexo"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=更换设备继续Hexo&body=Check out this article: https://blog.nanyan666.com/posts/58.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/58.html&name=更换设备继续Hexo&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/58.html&t=更换设备继续Hexo"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%9B%B4%E6%83%B3%E5%86%99%E8%BF%99%E4%B9%88%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87%EF%BC%8C%E4%BD%86%E6%98%AF%E6%B2%A1%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%86%99%E3%80%82%E8%BF%99%E6%AC%A1%E6%8D%A2%E4%BA%86%E8%AE%BE%E5%A4%87%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%86%99%E4%BA%86%E8%BF%99%E7%AF%87%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#push%E5%88%B0%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0"><span class="toc-number"></span> <span class="toc-text">push到代码托管平台</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8CCoding%E8%B4%A6%E5%8F%B7"><span class="toc-number"></span> <span class="toc-text">注册Coding账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#push%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number"></span> <span class="toc-text">push源文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%92%E9%99%A4%E9%83%A8%E5%88%86%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%8C%E6%AD%A5"><span class="toc-number"></span> <span class="toc-text">排除部分文件的同步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8%E6%96%B0%E7%94%B5%E8%84%91%E7%BB%A7%E7%BB%AD%E5%86%99Hexo"><span class="toc-number"></span> <span class="toc-text">在新电脑继续写Hexo</span></a>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        更换设备继续Hexo
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南岩666</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-06-16T15:05:12.000Z" itemprop="datePublished">2020-06-16</time>
+        
+        (Updated: <time datetime="2022-05-01T12:17:25.005Z" itemprop="dateModified">2022-05-01</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Software/">Software</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="tag-link-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。"><a href="#一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。" class="headerlink" title="一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。"></a>一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。</h3><h1 id="push到代码托管平台"><a href="#push到代码托管平台" class="headerlink" title="push到代码托管平台"></a>push到代码托管平台</h1><blockquote>
+<ul>
+<li>注意* 我这里源文件托管选择了Coding，网站还在Github上。毕竟国内速度好一点。</li>
+</ul>
+<p>还有，这篇文章是写给像我一样的Git小白的。如果是大佬就不用浪费宝贵时间了。如果有什么不对支持，还请提出让我改正。</p>
+</blockquote>
+<h2 id="注册Coding账号"><a href="#注册Coding账号" class="headerlink" title="注册Coding账号"></a>注册Coding账号</h2><p>现在Coding改版了，加了个什么~~~辣鸡~~~团队的东西，有点不舒服。</p>
+<h2 id="push源文件"><a href="#push源文件" class="headerlink" title="push源文件"></a>push源文件</h2><p>先生成ssh文件，以便和git仓库进行同步。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>找到个人文件夹下面的<code>.ssh</code>目录，打开，复制里面的pub公钥。</p>
+<p>Coding主界面右上角个人设置，打开<code>SSH公钥</code>，把复制的pub公钥加进去。</p>
+<p>打开你的Hexo根目录，并右键<code>Git Bash Here</code>，测试你的SSH配置对不对，能不能连接Coding。代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@git.coding.net</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>2020&#x2F;7&#x2F;8 23:06 补充<br>提示：现在Coding把ssh地址改了，现在正确的是<code>git@e.coding.net</code>。现在我总是连不上，看了官方的文档就傻眼了。而且新的反馈文字也不一样了。见下图：<br><img src="https://s1.ax1x.com/2020/07/26/aC2kAe.png"></p>
+</blockquote>
+<p>如果连接github地话，使用这个：<a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a>。</p>
+<p>出现Hi XXX的情况，配置就对了。fetal的话，就再配置一下哈。</p>
+<hr>
+<p>2020&#x2F;7&#x2F;8 23:06 补充</p>
+<p>我遇到了特殊情况，如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/07/26/aC23NQ.png"></p>
+<p>Google之后发现<code>.ssh</code>这个文件夹里少了<code>known_hosts</code>这个文件。这时直接按提示输入<code>yes</code>就好了。</p>
+<hr>
+<p>在Hexo根目录弄一个本地Git仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>然后目录下面会多出一个隐藏的.git文件夹，这就是仓库，最好别乱动它。</p>
+<p>然后把Hexo根目录加入到本地仓库中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意！！！ <code>add</code>后面有一个<code>space</code>和一个点！</p>
+</blockquote>
+<p>这条命令就是把目录下所有的文件（不包括仓库自己哦）添加到仓库里。注意add后面有一空格还有一个点。</p>
+<p>然后注上commit，文件到达暂存区：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;这里想些啥写啥&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>之后我们连接Coding的仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote origin git@git.coding.net/***</span><br></pre></td></tr></table></figure>
+
+<p>注意一下哈，这里的<code>origin</code>是你在<code>GitBash</code>里对这个远程仓库的称呼，可以自己改成喜欢的。如果你已经有<code>origin</code>的仓库了，那么会报错，<code>fetal</code>警告！！这时换一个名字就好了。后面的<code>git@git.coding.net/***</code>就是你仓库的地址，最好ssh的。</p>
+<p>最后，可以push了；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注释：<code>origin</code>就是之前远程仓库的名字。<code>master</code>是远程仓库的分支，如果要其他分支的话，请先创建。</p>
+</blockquote>
+<p>不出意外的话，Coding上已经有本地的文件了。</p>
+<p>不过同步速度还是有点慢。</p>
+<h1 id="排除部分文件的同步"><a href="#排除部分文件的同步" class="headerlink" title="排除部分文件的同步"></a>排除部分文件的同步</h1><p>这时就要用到<code>.gitignore</code>文件了。他能够排除个别文件夹保存到仓库。</p>
+<p>Bash里，输入一下的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> .gitignore</span><br></pre></td></tr></table></figure>
+
+<p>之后检查一下根目录，里面会出现<code>.gitignore</code>文件，里面会有一些拒绝提交的文件名称。比如我的里面是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line">package-lock.json</span><br></pre></td></tr></table></figure>
+
+<p>然后，删除本地仓库里的文件，再add commit push，一些临时文件就没了。速度也快了。</p>
+<p><del>今天有点晚了，明天再更新。</del></p>
+<p>我又回来了！</p>
+<p><code>.gitignore</code>文件的书写教程我过段时间再写。我为了折腾<code>hexo-lazyload-image</code>和<code>hexo-prism-plugin</code>这两个插件，我先是百度，但国内的教程质量，你们都懂。CSDN的文章纯属乱扯。然后我去QQ群里问大佬，但是没人理我&#x2F;我枯了，看来我人品不好。接下来我自己科学上网去Git官网翻资料，我才自己解决。</p>
+<h1 id="在新电脑继续写Hexo"><a href="#在新电脑继续写Hexo" class="headerlink" title="在新电脑继续写Hexo"></a>在新电脑继续写Hexo</h1><p>安装<code>Git</code>和<code>Node.js</code>这俩我不多说，会写博客就会安装。</p>
+<p>然后新建一个文件夹，如果你在<code>Coding</code>上的博客源文件开源了，那你可以直接<code>Clone</code>。</p>
+<p>在下图找到你的<code>Git</code>仓库<code>Https</code>地址，然后我们<code>Clone</code>。</p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/35f9862168f9d.png"></p>
+<p>在<code>Git Bash</code>中输入以下代码。注意把链接改成自己的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://e.coding.net/atasgayb/blog/blog.git</span><br></pre></td></tr></table></figure>
+
+<p>然后我们关掉<code>Git Bash</code>，打开Clone下来的文件夹。再重新打开<code>Git Bash</code>。</p>
+<p>我们先安装<code>hexo</code>：</p>
+<p>依次运行以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
+
+<p>然后我们安装<code>Hexo</code>同步<code>Git</code>仓库的插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>最后安装所有依赖插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>如果你安装的插件很多的话，最后一步可能会很慢。</p>
+<p>接下来就和原来的环境一模一样了，你可以安稳地写博客了。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">主页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%9B%B4%E6%83%B3%E5%86%99%E8%BF%99%E4%B9%88%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87%EF%BC%8C%E4%BD%86%E6%98%AF%E6%B2%A1%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%86%99%E3%80%82%E8%BF%99%E6%AC%A1%E6%8D%A2%E4%BA%86%E8%AE%BE%E5%A4%87%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%86%99%E4%BA%86%E8%BF%99%E7%AF%87%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#push%E5%88%B0%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0"><span class="toc-number"></span> <span class="toc-text">push到代码托管平台</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8CCoding%E8%B4%A6%E5%8F%B7"><span class="toc-number"></span> <span class="toc-text">注册Coding账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#push%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number"></span> <span class="toc-text">push源文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%92%E9%99%A4%E9%83%A8%E5%88%86%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%8C%E6%AD%A5"><span class="toc-number"></span> <span class="toc-text">排除部分文件的同步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8%E6%96%B0%E7%94%B5%E8%84%91%E7%BB%A7%E7%BB%AD%E5%86%99Hexo"><span class="toc-number"></span> <span class="toc-text">在新电脑继续写Hexo</span></a>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/58.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/58.html&text=更换设备继续Hexo"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/58.html&is_video=false&description=更换设备继续Hexo"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=更换设备继续Hexo&body=Check out this article: https://blog.nanyan666.com/posts/58.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/58.html&title=更换设备继续Hexo"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/58.html&name=更换设备继续Hexo&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/58.html&t=更换设备继续Hexo"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    南岩666
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">主页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

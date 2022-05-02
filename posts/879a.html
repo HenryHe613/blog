@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Matery主题添加Artitalk前言先上链接，这是我的说说界面：闲言碎语 有时候啊，hexo想发说说&#x2F;微语总是有点麻烦，这时候Artitalk出现了。 安装ArtitalkMatery主题没有自带Artitalk集成，所以要自己安装。 先生成一个说说的页面： 1hexo new page &quot;shuoshuo&quot;  然后在blog&#x2F;source&#x2F;下面出现了shuosh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matery主题添加Artitalk">
+<meta property="og:url" content="https://blog.nanyan666.com/posts/879a.html">
+<meta property="og:site_name" content="南岩666のBlog">
+<meta property="og:description" content="Matery主题添加Artitalk前言先上链接，这是我的说说界面：闲言碎语 有时候啊，hexo想发说说&#x2F;微语总是有点麻烦，这时候Artitalk出现了。 安装ArtitalkMatery主题没有自带Artitalk集成，所以要自己安装。 先生成一个说说的页面： 1hexo new page &quot;shuoshuo&quot;  然后在blog&#x2F;source&#x2F;下面出现了shuosh">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200710130542.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200710131031.png">
+<meta property="article:published_time" content="2020-07-10T03:33:22.000Z">
+<meta property="article:modified_time" content="2022-05-01T12:17:24.998Z">
+<meta property="article:author" content="南岩666">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Matery">
+<meta property="article:tag" content="Artitalk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200710130542.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+    
+    <!-- title -->
+    <title>Matery主题添加Artitalk</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="الأعلى" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">主页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/posts/7fe9.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/u7r6.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/879a.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/879a.html&text=Matery主题添加Artitalk"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/879a.html&is_video=false&description=Matery主题添加Artitalk"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Matery主题添加Artitalk&body=Check out this article: https://blog.nanyan666.com/posts/879a.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/879a.html&name=Matery主题添加Artitalk&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/879a.html&t=Matery主题添加Artitalk"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Matery%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Artitalk"><span class="toc-number">1.</span> <span class="toc-text">Matery主题添加Artitalk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Artitalk"><span class="toc-number">3.</span> <span class="toc-text">安装Artitalk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0Valine"><span class="toc-number">4.</span> <span class="toc-text">更新Valine</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E8%AF%B4%E8%AF%B4%E7%95%8C%E9%9D%A2"><span class="toc-number">5.</span> <span class="toc-text">优化说说界面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%94%E6%85%A2%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">6.</span> <span class="toc-text">且慢！！！</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Matery主题添加Artitalk
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南岩666</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-07-10T03:33:22.000Z" itemprop="datePublished">2020-07-10</time>
+        
+        (Updated: <time datetime="2022-05-01T12:17:24.998Z" itemprop="dateModified">2022-05-01</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Software/">Software</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Artitalk/" rel="tag">Artitalk</a>, <a class="tag-link-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="tag-link-link" href="/tags/Matery/" rel="tag">Matery</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Matery主题添加Artitalk"><a href="#Matery主题添加Artitalk" class="headerlink" title="Matery主题添加Artitalk"></a>Matery主题添加Artitalk</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>先上链接，这是我的说说界面：<a target="_blank" rel="noopener" href="https://www.yelow.ga/shuoshuo/">闲言碎语</a></p>
+<p>有时候啊，hexo想发说说&#x2F;微语总是有点麻烦，这时候Artitalk出现了。</p>
+<h1 id="安装Artitalk"><a href="#安装Artitalk" class="headerlink" title="安装Artitalk"></a>安装Artitalk</h1><p>Matery主题没有自带Artitalk集成，所以要自己安装。</p>
+<p>先生成一个说说的页面：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;shuoshuo&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后在<code>blog/source/</code>下面出现了<code>shuoshuo</code>这个文件夹，里面有一个<code>index.md</code>文件。</p>
+<p>打开这个文件，现在里面是这样的：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: shuoshuo</span><br><span class="line">date: 2020-06-05 11:15:37</span><br><span class="line">type: shuoshuo</span><br><span class="line">\-\-\-</span><br></pre></td></tr></table></figure>
+
+<p>把<code>Front-Matery</code>改成这样：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 闲言</span><br><span class="line">date: 2020-06-05 11:15:37</span><br><span class="line">type: &quot;shuoshuo&quot;</span><br><span class="line">\-\-\-</span><br></pre></td></tr></table></figure>
+
+<p>当然<code>title</code>你可以自定义哦</p>
+<p>之前真的很头疼，<code>Artitalk</code>和<code>Valine</code>不能同时使用，因为两者的后台都是基于<code>LeanClou</code>d的，所以不能一起使用。我也曾因此放弃过搭建说说。</p>
+<p>我也试过在<code>Front-Matter</code>里添加<code>comments: &#39;false&#39;</code>，但是这个方法仅适用于<code>Butterfly</code>主题，<code>Matery</code>主题没有这个配置。</p>
+<p>但是前几天看到<code>Artitalk</code>官方的文档说解决了这个问题，我就再次尝试了。</p>
+<p>和<code>Valine</code>一样，打开<code>LeanCloud</code>之后创建应用，之后我借用一下<code>Artitalk.js</code>的官方文档。</p>
+<ol>
+<li><p>绑定完成之后点击创建应用，应用名称随意，接着在结构化数据中创建<code>class</code>，命名为<code>shuoshuo</code>。</p>
+</li>
+<li><p>在你新建的应用中找到结构化数据下的用户。点击<code>添加用户</code>，输入想用的用户名及密码。</p>
+</li>
+<li><p>回到结构化数据中，点击<code>class</code>下的<code>shuoshuo</code>。找到<code>权限</code>，在<code>Class</code>访问权限中将<code>add_fields</code>以及<code>create</code>权限设置为指定用户，输入你刚才输入的用户名会自动匹配。为了安全起见，将<code>delete</code>和<code>update</code>也设置为跟它们一样的权限。</p>
+</li>
+<li><p>点击<code>class</code>下的<code>_User</code>添加列，列名称为<code>img</code>，默认值填上你这个账号想要用的头像url，这一项不进行配置，说说头像会显示为默认头像——Artitalk的logo。</p>
+</li>
+<li><p>在最菜单栏中找到<code>设置</code>-&gt;<code>应用keys</code>，记下来<code>AppID</code>和<code>AppKey</code>，一会会用。</p>
+</li>
+<li><p>最后将<code>_User</code>中的权限全部调为指定用户，或者数据创建者，为了保证不被篡改用户数据已达到强制发布说说。</p>
+</li>
+<li><p>因为<code>leancloud</code>功能的限制。若想同时使用<code>valine</code>和<code>artitalk</code>，请在<code>class</code>中添加名为<code>Comment</code>的<code>class</code>。不推荐在存储<code>valine</code>的应用中新建名为<code>shuoshuo</code>的<code>class</code>，可能会出现神奇的bug。</p>
+</li>
+</ol>
+<p>之后在<code>shuoshuo</code>的<code>index.md</code>里添加如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://libs.baidu.com/jquery/2.0.0/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-handlebars"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    var appID=&quot;&quot;; <span class="comment">&lt;!--这里填写刚刚获取的appID--&gt;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    var appKEY=&quot;&quot;; <span class="comment">&lt;!--这里填写刚刚获取的appKEY--&gt;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    </span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;artitalk_main&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/artitalk&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果出现特殊情况，我这里不一一解释&#x2F;*其实我也不懂emmmm*&#x2F;。最好是查看<code>Artitalk.js</code>的官方文档&#x3D;&#x3D;&gt;<a target="_blank" rel="noopener" href="https://artitalk.js.org/faq.html#%F0%9F%94%A8-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">传送门</a></p>
+<p>还有哈，有一些自定义功能可以到<code>Artitalk.js</code>的官方文档里查看，在这里&#x3D;&#x3D;&gt;<a target="_blank" rel="noopener" href="https://artitalk.js.org/settings.html#%E5%BF%85%E5%A1%AB">传送门</a></p>
+<p>但是<code>Artitalk</code>仍然不能使用。</p>
+<h1 id="更新Valine"><a href="#更新Valine" class="headerlink" title="更新Valine"></a>更新Valine</h1><p>Artitalk的大佬说了，<code>Valine</code>里面的<code>av-min.js</code>干扰了<code>Artitalk</code>。而v1.4.x版的<code>Valine</code>可以不需要<code>av-min.js</code>。于是我得把<code>Valine</code>升级一下。</p>
+<p>由于<code>Valine</code>是集成在<code>Matery</code>主题里的，所以升级可折腾死我了。</p>
+<p>到Github上找到<code>Valine</code>：<a target="_blank" rel="noopener" href="https://github.com/xCss/Valine">传送门</a></p>
+<p>复制https的Git地址，到<a target="_blank" rel="noopener" href="http://g.widyun.com/">GitHub代下载服务</a>快速下载&#x2F;&#x2F;真的没有打广告</p>
+<p>然后解压，在<code>dist</code>文件夹里找到<code>Valine.min.js</code>，复制并替换blog\themes\matery\source\libs\valine里面的<code>Valine.min.js</code></p>
+<p>并删除<code>av-min.js</code>，然后<code>hexo cl&amp;&amp;hexo g&amp;&amp;hexo s</code>。查看的地址是 [https:&#x2F;&#x2F;{you blog’s site}&#x2F;shuoshuo](https:&#x2F;&#x2F;{you blog’s site}&#x2F;shuoshuo)</p>
+<p>以下是我的效果图，但是我觉得这个样子很难看，这些画红框框的地方我不喜欢。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200710130542.png"></p>
+<p>更不能忍受的是，最下面的文章跳转吧我的appID和appKey给泄露了。不但不美观，还有点危险。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200710131031.png"></p>
+<h1 id="优化说说界面"><a href="#优化说说界面" class="headerlink" title="优化说说界面"></a>优化说说界面</h1><p>我再想了一下，由于我没有给<code>shuoshuo</code>定义页面，所以它就按照<code>post</code>的样式来了。</p>
+<p>在<code>Front-Matter</code>里加上这个一行：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">layout: &quot;shuoshuo&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后在主题文件夹下找到<code>\matery\layout\</code>，在里面新建一个<code>shuoshuo.ejs</code>文件。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="comment">/* don&#x27;t remove. */</span></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.about-cover</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">height</span>: <span class="number">75vh</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&lt;%- partial(&#x27;_partial/bg-cover&#x27;) %&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">main</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;aboutme&quot;</span> <span class="attr">class</span>=<span class="string">&quot;container about-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-content&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-content article-card-content&quot;</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;title center-align&quot;</span> <span class="attr">data-aos</span>=<span class="string">&quot;zoom-in-up&quot;</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-comment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>&lt;%- __(&#x27;闲言碎语&#x27;) %&gt;</span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;articleContent&quot;</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-up&quot;</span>&gt;</span></span><br><span class="line">                     &lt;%- page.content %&gt;</span><br><span class="line">                 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            &lt;% if (theme.gitalk &amp;&amp; theme.gitalk.enable) &#123; %&gt;</span><br><span class="line">            &lt;%- partial(&#x27;_partial/gitalk&#x27;) %&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">            &lt;% if (theme.gitment.enable) &#123; %&gt;</span><br><span class="line">            &lt;%- partial(&#x27;_partial/gitment&#x27;) %&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">            &lt;% if (theme.disqus.enable) &#123; %&gt;</span><br><span class="line">            &lt;%- partial(&#x27;_partial/disqus&#x27;) %&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">            &lt;% if (theme.livere &amp;&amp; theme.livere.enable) &#123; %&gt;</span><br><span class="line">            &lt;%- partial(&#x27;_partial/livere&#x27;) %&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">            &lt;% if (theme.valine &amp;&amp; theme.valine.enable) &#123; %&gt;</span><br><span class="line">            &lt;%- partial(&#x27;_partial/valine&#x27;) %&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这个代码是我从<code>about.ejs</code>里面复制来的，经过删减和添加，可能效果还是不怎么样，但是毕竟算是我捣鼓出来的emmm。有不合理之处请赐教。</p>
+</blockquote>
+<p>最后可以<code>hexo cl&amp;&amp;hexo g&amp;&amp;hexo s</code>看看，并试着<code>hexo d</code>了。</p>
+<h1 id="且慢！！！"><a href="#且慢！！！" class="headerlink" title="且慢！！！"></a>且慢！！！</h1><p>我忘了一个很重要的事，要在主题文件的_config.yml里添加这么一行：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">说说:</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/shuoshuo</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">fa</span> <span class="string">fa-comment</span></span><br></pre></td></tr></table></figure>
+
+<p>这样才能在顶部菜单栏里看到这个页面。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">主页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Matery%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Artitalk"><span class="toc-number">1.</span> <span class="toc-text">Matery主题添加Artitalk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Artitalk"><span class="toc-number">3.</span> <span class="toc-text">安装Artitalk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0Valine"><span class="toc-number">4.</span> <span class="toc-text">更新Valine</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E8%AF%B4%E8%AF%B4%E7%95%8C%E9%9D%A2"><span class="toc-number">5.</span> <span class="toc-text">优化说说界面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%94%E6%85%A2%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">6.</span> <span class="toc-text">且慢！！！</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/879a.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/879a.html&text=Matery主题添加Artitalk"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/879a.html&is_video=false&description=Matery主题添加Artitalk"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Matery主题添加Artitalk&body=Check out this article: https://blog.nanyan666.com/posts/879a.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/879a.html&title=Matery主题添加Artitalk"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/879a.html&name=Matery主题添加Artitalk&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/879a.html&t=Matery主题添加Artitalk"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    南岩666
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">主页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

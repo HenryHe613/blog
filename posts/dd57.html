@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="阿里云免费建网盘前言我白嫖到了微软的25TB储存，但是下载不方便，想用这点容量搭一个网盘。 考虑到我没有可以使用的云服务器，所需就选择了Oneindex-Serverless。 看了阿里云官网的Oneindex-serverless搭建文档，踩了好几个坑。官方文档 然鹅阿里云的文章也不是自己写的。阿里嫖了知乎的一篇文章传送门  枯了枯了，网上还有很多文档，但是都是一摸一样的。 了解Onedrive">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云免费建网盘">
+<meta property="og:url" content="https://blog.nanyan666.com/posts/dd57.html">
+<meta property="og:site_name" content="南岩666のBlog">
+<meta property="og:description" content="阿里云免费建网盘前言我白嫖到了微软的25TB储存，但是下载不方便，想用这点容量搭一个网盘。 考虑到我没有可以使用的云服务器，所需就选择了Oneindex-Serverless。 看了阿里云官网的Oneindex-serverless搭建文档，踩了好几个坑。官方文档 然鹅阿里云的文章也不是自己写的。阿里嫖了知乎的一篇文章传送门  枯了枯了，网上还有很多文档，但是都是一摸一样的。 了解Onedrive">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3mDvd.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3mR58.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/TIM%E6%88%AA%E5%9B%BE20200712095025.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/catgretg.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629182911.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629182923.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712095512.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3mh8g.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3moKs.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3mbV0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3mXPU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3n3i8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3ntMj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3n5FK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3uvu9.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629183101.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E5%9B%BE%E7%89%8720200629183142.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629183535.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712101145.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712101311.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712101926.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712103506.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712131713.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712103506.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3808x.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U38bZQ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3G8JI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3GsWq.png">
+<meta property="article:published_time" content="2020-07-12T01:24:24.000Z">
+<meta property="article:modified_time" content="2022-05-01T12:17:25.009Z">
+<meta property="article:author" content="南岩666">
+<meta property="article:tag" content="Onedrive">
+<meta property="article:tag" content="网盘">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/12/U3mDvd.jpg">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+    
+    <!-- title -->
+    <title>阿里云免费建网盘</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="الأعلى" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">主页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/posts/15b.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/7fe9.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/dd57.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/dd57.html&text=阿里云免费建网盘"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/dd57.html&is_video=false&description=阿里云免费建网盘"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阿里云免费建网盘&body=Check out this article: https://blog.nanyan666.com/posts/dd57.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/dd57.html&name=阿里云免费建网盘&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/dd57.html&t=阿里云免费建网盘"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98"><span class="toc-number">1.</span> <span class="toc-text">阿里云免费建网盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3Onedrive-Serverless"><span class="toc-number">3.</span> <span class="toc-text">了解Onedrive-Serverless</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAOnedrive-Serverless"><span class="toc-number">4.</span> <span class="toc-text">搭建Onedrive-Serverless</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E9%80%9A%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%82%A8%E5%AD%98OSS"><span class="toc-number">4.1.</span> <span class="toc-text">开通函数计算和对象储存OSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%82%A8%E5%AD%98OSS"><span class="toc-number">4.2.</span> <span class="toc-text">配置对象储存OSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEaccess%E5%AD%90%E8%B4%A6%E6%88%B7"><span class="toc-number">4.3.</span> <span class="toc-text">配置access子账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEServerless%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97"><span class="toc-number">4.4.</span> <span class="toc-text">配置Serverless函数计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="toc-number">4.5.</span> <span class="toc-text">前端配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5Onedrive"><span class="toc-number">4.6.</span> <span class="toc-text">连接Onedrive</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        阿里云免费建网盘
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南岩666</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-07-12T01:24:24.000Z" itemprop="datePublished">2020-07-12</time>
+        
+        (Updated: <time datetime="2022-05-01T12:17:25.009Z" itemprop="dateModified">2022-05-01</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Software/">Software</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Onedrive/" rel="tag">Onedrive</a>, <a class="tag-link-link" href="/tags/%E7%BD%91%E7%9B%98/" rel="tag">网盘</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="阿里云免费建网盘"><a href="#阿里云免费建网盘" class="headerlink" title="阿里云免费建网盘"></a>阿里云免费建网盘</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我白嫖到了微软的25TB储存，但是下载不方便，想用这点容量搭一个网盘。</p>
+<p>考虑到我没有可以使用的云服务器，所需就选择了Oneindex-Serverless。</p>
+<p>看了阿里云官网的Oneindex-serverless搭建文档，踩了好几个坑。<a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/711543">官方文档</a></p>
+<p>然鹅阿里云的文章也不是自己写的。阿里嫖了知乎的一篇文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/74538287">传送门</a></p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3mDvd.jpg" alt="U3mDvd.jpg"></p>
+<p>枯了枯了，网上还有很多文档，但是都是一摸一样的。</p>
+<h1 id="了解Onedrive-Serverless"><a href="#了解Onedrive-Serverless" class="headerlink" title="了解Onedrive-Serverless"></a>了解Onedrive-Serverless</h1><p>Oneindex前段时间被删库了，作者亲自删的，TA也没说为什么。包括Goindex也被删库了。</p>
+<p>Oneindex-Serverless是另一个人做的，仓库地址在这里<a target="_blank" rel="noopener" href="https://github.com/LiuChangFreeman/OneIndex-Serverless">https://github.com/LiuChangFreeman/OneIndex-Serverless</a></p>
+<p>Oneindex是基于PHP的，需要PHP空间，像我这种白嫖党是不可能买的，这辈子都不可能 <img src="https://s1.ax1x.com/2020/07/12/U3mR58.jpg" alt="U3mR58.jpg"></p>
+<p>而Oneindex是基于Serverless云函数的，不用PHP空间，对我来说十分有吸引力。</p>
+<h1 id="搭建Onedrive-Serverless"><a href="#搭建Onedrive-Serverless" class="headerlink" title="搭建Onedrive-Serverless"></a>搭建Onedrive-Serverless</h1><h2 id="开通函数计算和对象储存OSS"><a href="#开通函数计算和对象储存OSS" class="headerlink" title="开通函数计算和对象储存OSS"></a>开通函数计算和对象储存OSS</h2><p>注册<a target="_blank" rel="noopener" href="https://www.aliyun.com/">阿里云</a></p>
+<p>先开通函数计算和对象储存OSS。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/TIM%E6%88%AA%E5%9B%BE20200712095025.png"></p>
+<h2 id="配置对象储存OSS"><a href="#配置对象储存OSS" class="headerlink" title="配置对象储存OSS"></a>配置对象储存OSS</h2><p>然后我们先到对象储存OSS进行设置。<a target="_blank" rel="noopener" href="https://oss.console.aliyun.com/overview">控制台传送门</a></p>
+<p>新建储存桶，Bucket。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/catgretg.jpg"></p>
+<p>然后进行以下配置。注意，要记住<code>区域</code>，之后有用的，然后<code>Bucket名称</code>可以自定义。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629182911.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629182923.png"></p>
+<p>然后可以看到关于这个Bucket的<code>概览</code>。记住<code>内网</code>的<code>Endpoint</code>，就在下面的图片红框中。&#x2F;&#x2F;hh，图片我网上搜了一张，我以前截屏的丢了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712095512.png"></p>
+<h2 id="配置access子账户"><a href="#配置access子账户" class="headerlink" title="配置access子账户"></a>配置access子账户</h2><p>右上角选择<code>AccessKey</code>管理，</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3mh8g.png" alt="U3mh8g.png"></p>
+<p>先选择<code>创建AccessKey子账户</code>,</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3moKs.png" alt="U3moKs.png"></p>
+<p>然后再创建用户，如下图。</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3mbV0.png" alt="U3mbV0.png"></p>
+<p>然后自定义下面的内容</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3mXPU.png" alt="U3mXPU.png"></p>
+<p>之后添加权限。</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3n3i8.png" alt="U3n3i8.png"></p>
+<p>添加<code>AliyunOSSFullAccess</code>权限，添加过后右侧会自动添加权限，然后被添加的权限也会变成淡蓝色。点击下面的<code>确定</code>.</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3ntMj.png" alt="U3ntMj.png"></p>
+<p>之后我们去获取AccessKey。</p>
+<p>点击Access账户，即下图蓝色的文字。</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3n5FK.png" alt="U3n5FK.png"></p>
+<p>在下方<code>创建AccessKey</code>。然后弹出这样一个框：</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3uvu9.png" alt="U3uvu9.png"></p>
+<blockquote>
+<p>ID和SECRET必须保存好，之后它们不会再出现！！！</p>
+</blockquote>
+<h2 id="配置Serverless函数计算"><a href="#配置Serverless函数计算" class="headerlink" title="配置Serverless函数计算"></a>配置Serverless函数计算</h2><p>打开函数计算的控制台<a target="_blank" rel="noopener" href="https://fc.console.aliyun.com/fc/overview/">控制台传送门</a></p>
+<blockquote>
+<p>提醒：记得左上角选择和Bucket一样的地域！！！不然serverless不能访问Bucket！！！</p>
+</blockquote>
+<p>新建函数！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629183101.png"></p>
+<p>选择flask-web这个模板，然后下一步。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E5%9B%BE%E7%89%8720200629183142.png"></p>
+<p>自定义下面图片红框的内容，最好你自己能够记牢。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/%E6%88%AA%E5%9B%BE20200629183535.png"></p>
+<p>然后我们来配置初始化。</p>
+<p>打开下面的<code>配置</code>.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712101145.png"></p>
+<p>进行如下的配置，新建<code>main.initializer</code>函数初始化入口，并把<code>超时时间</code>选最大。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712101311.png"></p>
+<blockquote>
+<p>注意：右下角还有一个<code>提交</code>！！！别忘了提交，不然不会保存这个设置！！！</p>
+</blockquote>
+<p>然后我们编辑一下代码。按下图打开<code>代码执行管理</code>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712101926.png"></p>
+<p>然后把下面的代码复制进去。会很长，但是省的你们去下载了。如果要下载，<del>我过会儿会放我的网盘上哈</del>,我已经放在网盘上了，<del>在这里<a target="_blank" rel="noopener" href="https://drive.yelow.ga/#/?path=Public_Source/Blog/dd57">https://drive.yelow.ga/#/?path=Public_Source&#x2F;Blog&#x2F;dd57</a>，</del>前面的地址很慢，我又弄了个快一点的&#x2F;真的只是快了一点点&#x2F;地址：<a target="_blank" rel="noopener" href="https://share.yelow.ga/Blog/dd57/">https://share.yelow.ga/Blog/dd57/</a>文件为Back.zip。记得过会儿Save一下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> oss2</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask,request,redirect</span><br><span class="line"></span><br><span class="line">password=<span class="string">&quot;123456&quot;</span></span><br><span class="line">url_host= <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">access_key=<span class="string">&#x27;&#x27;</span></span><br><span class="line">access_key_secret=<span class="string">&#x27;&#x27;</span></span><br><span class="line">oss_end_point= <span class="string">&#x27;&#x27;</span></span><br><span class="line">oss_bucket_name=<span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">path_oss_store= <span class="string">&quot;oneindex-serverless&quot;</span></span><br><span class="line">filename_token= <span class="string">&quot;token.json&quot;</span></span><br><span class="line">items_per_page=<span class="number">50</span></span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">app.secret_key = <span class="string">&#x27;oneindex-serverless&#x27;</span></span><br><span class="line"></span><br><span class="line">client_id = <span class="string">&#x27;0375f766-e528-4748-91e2-7d8fcb702889&#x27;</span></span><br><span class="line">client_secret = <span class="string">&#x27;vXOJL93&#123;#?xnotilNIU895:&#x27;</span></span><br><span class="line">redirect_uri_register = <span class="string">&#x27;https://oneindex-serverless.github.io/redirect&#x27;</span></span><br><span class="line">redirect_uri_final = <span class="string">&#x27;&#123;&#125;/login/authorized&#x27;</span>.<span class="built_in">format</span>(url_host.strip(<span class="string">&quot;/&quot;</span>))</span><br><span class="line"></span><br><span class="line">auth = oss2.Auth(access_key,access_key_secret)</span><br><span class="line">bucket = oss2.Bucket(auth, oss_end_point, oss_bucket_name)</span><br><span class="line">base_url=<span class="string">&#x27;https://graph.microsoft.com/v1.0/&#x27;</span></span><br><span class="line">scopes= <span class="string">&quot;offline_access files.readwrite.all&quot;</span></span><br><span class="line">select=<span class="string">&quot;id,name,size,folder,image,video,lastModifiedDateTime&quot;</span></span><br><span class="line"></span><br><span class="line">token=<span class="literal">None</span></span><br><span class="line">oss_available=<span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">initializer</span>(<span class="params">context</span>):</span><br><span class="line">    init()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">handler</span>(<span class="params">environ, start_response</span>):</span><br><span class="line">    <span class="keyword">return</span> app(environ, start_response)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">home</span>():</span><br><span class="line">    <span class="keyword">if</span> token==<span class="literal">None</span> <span class="keyword">or</span> <span class="string">&quot;account&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> token:</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&quot;success&quot;</span>:<span class="literal">False</span>,</span><br><span class="line">            <span class="string">&quot;oss_available&quot;</span>:oss_available</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&quot;success&quot;</span>: <span class="literal">True</span>,</span><br><span class="line">            <span class="string">&quot;account&quot;</span>:token[<span class="string">&quot;account&quot;</span>],</span><br><span class="line">            <span class="string">&quot;oss_available&quot;</span>:oss_available,</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> json.dumps(data)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/verify&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">verify</span>():</span><br><span class="line">    code=request.args.get(<span class="string">&quot;code&quot;</span>)</span><br><span class="line">    code=base64.b64decode(code)</span><br><span class="line">    <span class="keyword">if</span> code==password:</span><br><span class="line">        data=&#123;</span><br><span class="line">            <span class="string">&quot;success&quot;</span>:<span class="literal">True</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        data=&#123;</span><br><span class="line">            <span class="string">&quot;success&quot;</span>:<span class="literal">False</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> json.dumps(data)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/login&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">login</span>():</span><br><span class="line">    code=request.args.get(<span class="string">&quot;code&quot;</span>)</span><br><span class="line">    code=base64.b64decode(code)</span><br><span class="line">    final=request.args.get(<span class="string">&quot;final&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> code==password:</span><br><span class="line">        url_login=<span class="string">&quot;https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=&#123;&#125;&amp;scope=&#123;&#125;&amp;response_type=code&amp;redirect_uri=&#123;&#125;&amp;state=&#123;&#125;&quot;</span>.<span class="built_in">format</span>(client_id, urllib.quote(scopes), redirect_uri_register, redirect_uri_final+<span class="string">&quot;*&quot;</span>+final)</span><br><span class="line">        <span class="keyword">return</span> redirect(url_login)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/login/authorized&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">authorized</span>():</span><br><span class="line">    <span class="keyword">global</span> token</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        code=request.args.get(<span class="string">&quot;code&quot;</span>)</span><br><span class="line">        final = request.args.get(<span class="string">&quot;final&quot;</span>)</span><br><span class="line">        url = <span class="string">&quot;https://login.microsoftonline.com/common/oauth2/v2.0/token&quot;</span></span><br><span class="line">        headers = &#123;</span><br><span class="line">            <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/x-www-form-urlencoded&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        form = <span class="string">&quot;client_id=&#123;&#125;&amp;redirect_uri=&#123;&#125;&amp;client_secret=&#123;&#125;&amp;code=&#123;&#125;&amp;grant_type=authorization_code&quot;</span>.<span class="built_in">format</span>(client_id,redirect_uri_register,client_secret,code)</span><br><span class="line">        token = requests.post(url, headers=headers, data=form).json()</span><br><span class="line">        token[<span class="string">&quot;time&quot;</span>] = time.time()</span><br><span class="line">        path = <span class="string">&quot;me/drive&quot;</span></span><br><span class="line">        url = base_url + path</span><br><span class="line">        access_token = token[<span class="string">&quot;access_token&quot;</span>]</span><br><span class="line">        headers = &#123;</span><br><span class="line">            <span class="string">&quot;Authorization&quot;</span>: <span class="string">&quot;bearer &#123;&#125;&quot;</span>.<span class="built_in">format</span>(access_token),</span><br><span class="line">            <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        me = requests.get(url, headers=headers).json()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            token[<span class="string">&quot;account&quot;</span>]=me[<span class="string">&quot;owner&quot;</span>][<span class="string">&quot;user&quot;</span>][<span class="string">&quot;email&quot;</span>]</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            token[<span class="string">&quot;account&quot;</span>] = me[<span class="string">&quot;owner&quot;</span>][<span class="string">&quot;user&quot;</span>][<span class="string">&quot;displayName&quot;</span>]</span><br><span class="line">        token[<span class="string">&quot;drive&quot;</span>] = me[<span class="string">&quot;id&quot;</span>]</span><br><span class="line">        json_token = json.dumps(token, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">4</span>)</span><br><span class="line">        path_token = os.path.join(path_oss_store, filename_token)</span><br><span class="line">        bucket.put_object(path_token, json_token)</span><br><span class="line">        bucket.put_object_acl(path_token,oss2.OBJECT_ACL_PRIVATE)</span><br><span class="line">        <span class="keyword">return</span> redirect(final)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        result=&#123;<span class="string">&quot;error&quot;</span>:e.message,<span class="string">&quot;token&quot;</span>:token,<span class="string">&quot;code&quot;</span>:code,<span class="string">&quot;final&quot;</span>:final&#125;</span><br><span class="line">        <span class="keyword">return</span> json.dumps(result)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/list&#x27;</span>, methods = [<span class="string">&quot;GET&quot;</span>,<span class="string">&quot;POST&quot;</span>]</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">list</span>():</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        drive = token[<span class="string">&quot;drive&quot;</span>]</span><br><span class="line">        access_token = token[<span class="string">&quot;access_token&quot;</span>]</span><br><span class="line">        headers=&#123;</span><br><span class="line">            <span class="string">&quot;Authorization&quot;</span>:<span class="string">&quot;bearer &#123;&#125;&quot;</span>.<span class="built_in">format</span>(access_token),</span><br><span class="line">            <span class="string">&quot;Content-Type&quot;</span>:<span class="string">&quot;application/json&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> request.method==<span class="string">&quot;POST&quot;</span>:</span><br><span class="line">            data=request.get_data(as_text=<span class="literal">True</span>)</span><br><span class="line">            data = json.loads(data)</span><br><span class="line">            url=data[<span class="string">&quot;next&quot;</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            path=request.values.get(<span class="string">&quot;path&quot;</span>)</span><br><span class="line">            <span class="keyword">if</span> path:</span><br><span class="line">                path = <span class="string">&quot;drives/&#123;&#125;/root:/&#123;&#125;:/children&quot;</span>.<span class="built_in">format</span>(drive, path)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                path = <span class="string">&quot;me/drive/root/children&quot;</span></span><br><span class="line">            url = base_url + path</span><br><span class="line">            url = <span class="string">&quot;&#123;&#125;?$top=&#123;&#125;&amp;$select=&#123;&#125;&quot;</span>.<span class="built_in">format</span>(url, items_per_page, select)</span><br><span class="line">        data = requests.get(url, headers=headers).json()</span><br><span class="line">        response=&#123;&#125;</span><br><span class="line">        items=[]</span><br><span class="line">        <span class="built_in">list</span>=data[<span class="string">&quot;value&quot;</span>]</span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">            result=&#123;&#125;</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;folder&quot;</span> <span class="keyword">in</span> item:</span><br><span class="line">                result[<span class="string">&quot;type&quot;</span>]=<span class="string">&quot;folder&quot;</span></span><br><span class="line">                result[<span class="string">&quot;childCount&quot;</span>]=item[<span class="string">&quot;folder&quot;</span>][<span class="string">&quot;childCount&quot;</span>]</span><br><span class="line">            <span class="keyword">elif</span> <span class="string">&quot;image&quot;</span> <span class="keyword">in</span> item:</span><br><span class="line">                    result[<span class="string">&quot;type&quot;</span>]=<span class="string">&quot;picture&quot;</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="string">&quot;video&quot;</span> <span class="keyword">in</span> item:</span><br><span class="line">                result[<span class="string">&quot;type&quot;</span>] = <span class="string">&quot;play-square&quot;</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result[<span class="string">&quot;type&quot;</span>] = <span class="string">&quot;file&quot;</span></span><br><span class="line">            result[<span class="string">&quot;id&quot;</span>] = item[<span class="string">&quot;id&quot;</span>]</span><br><span class="line">            result[<span class="string">&quot;name&quot;</span>] = item[<span class="string">&quot;name&quot;</span>]</span><br><span class="line">            result[<span class="string">&quot;size&quot;</span>] = item[<span class="string">&quot;size&quot;</span>]</span><br><span class="line">            result[<span class="string">&quot;time&quot;</span>] = item[<span class="string">&quot;lastModifiedDateTime&quot;</span>]</span><br><span class="line">            items.append(result)</span><br><span class="line">        response[<span class="string">&quot;data&quot;</span>]=items</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;@odata.nextLink&quot;</span> <span class="keyword">in</span> data:</span><br><span class="line">            response[<span class="string">&quot;next&quot;</span>]=data[<span class="string">&quot;@odata.nextLink&quot;</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            response[<span class="string">&quot;next&quot;</span>] =<span class="literal">None</span></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        response=&#123;<span class="string">&quot;error&quot;</span>:e.message,<span class="string">&quot;data&quot;</span>:data&#125;</span><br><span class="line">    <span class="keyword">return</span> json.dumps(response)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/download&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download</span>():</span><br><span class="line">    <span class="built_in">id</span> = request.args.get(<span class="string">&quot;id&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">id</span>:</span><br><span class="line">        path=<span class="string">&#x27;me/drive/items/&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>)</span><br><span class="line">        url = base_url + path</span><br><span class="line">        access_token = token[<span class="string">&quot;access_token&quot;</span>]</span><br><span class="line">        headers = &#123;</span><br><span class="line">            <span class="string">&quot;Authorization&quot;</span>: <span class="string">&quot;bearer &#123;&#125;&quot;</span>.<span class="built_in">format</span>(access_token),</span><br><span class="line">            <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        data = requests.get(url, headers=headers).json()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">&quot;folder&quot;</span> <span class="keyword">in</span> data:</span><br><span class="line">            url_download=data[<span class="string">&quot;@microsoft.graph.downloadUrl&quot;</span>]</span><br><span class="line">            <span class="keyword">return</span> redirect(url_download)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.before_request</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">before</span>(<span class="params">*args,**kwargs</span>):</span><br><span class="line">    <span class="keyword">global</span> token</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        time_now = time.time()</span><br><span class="line">        time_last = token[<span class="string">&quot;time&quot;</span>]</span><br><span class="line">        <span class="keyword">if</span> time_now - time_last &gt;<span class="number">3500</span>:</span><br><span class="line">            refresh_token = token[<span class="string">&quot;refresh_token&quot;</span>]</span><br><span class="line">            scope = token[<span class="string">&quot;scope&quot;</span>]</span><br><span class="line">            url = <span class="string">&quot;https://login.microsoftonline.com/common/oauth2/v2.0/token&quot;</span></span><br><span class="line">            headers = &#123;</span><br><span class="line">                <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/x-www-form-urlencoded&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">            data = &#123;</span><br><span class="line">                <span class="string">&quot;client_id&quot;</span>: client_id,</span><br><span class="line">                <span class="string">&quot;client_secret&quot;</span>: client_secret,</span><br><span class="line">                <span class="string">&quot;redirect_uri&quot;</span>: redirect_uri_register,</span><br><span class="line">                <span class="string">&quot;refresh_token&quot;</span>: refresh_token,</span><br><span class="line">                <span class="string">&quot;grant_type&quot;</span>: <span class="string">&quot;refresh_token&quot;</span>,</span><br><span class="line">                <span class="string">&quot;scope&quot;</span>: scope,</span><br><span class="line">            &#125;</span><br><span class="line">            data = requests.post(url, data=data, headers=headers).json()</span><br><span class="line">            data[<span class="string">&quot;time&quot;</span>] = time.time()</span><br><span class="line">            data[<span class="string">&quot;account&quot;</span>] = token[<span class="string">&quot;account&quot;</span>]</span><br><span class="line">            data[<span class="string">&quot;drive&quot;</span>] = token[<span class="string">&quot;drive&quot;</span>]</span><br><span class="line">            token = data</span><br><span class="line">            json_token = json.dumps(data, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">4</span>)</span><br><span class="line">            path_token = os.path.join(path_oss_store, filename_token)</span><br><span class="line">            bucket.put_object(path_token, json_token)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">init</span>():</span><br><span class="line">    <span class="keyword">global</span> token,oss_available</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        service = oss2.Service(auth, oss_end_point.replace(<span class="string">&quot;http://&quot;</span>, <span class="string">&quot;&quot;</span>), connect_timeout=<span class="number">0.5</span>)</span><br><span class="line">        service.list_buckets()</span><br><span class="line">        oss_available=<span class="literal">True</span></span><br><span class="line">        path_token =<span class="string">&quot;&#123;&#125;/&#123;&#125;&quot;</span>.<span class="built_in">format</span>(path_oss_store,filename_token)</span><br><span class="line">        <span class="keyword">if</span> bucket.object_exists(path_token):</span><br><span class="line">            token = bucket.get_object(path_token)</span><br><span class="line">            token = json.loads(token.read())</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    init()</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+
+<p>第11行是你网盘管理员的密码，可以自定义，并且要记牢，以后一直都会用。</p>
+<p>第12行到下面的图片位置找。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712103506.png"></p>
+<p>然后14行在单引号中填写刚刚获取的AccessKey，15行填写AccessKey的密码</p>
+<p>在16行填写Endpoint，然后17行填写Bucket名称。</p>
+<h2 id="前端配置"><a href="#前端配置" class="headerlink" title="前端配置"></a>前端配置</h2><p>我们在前面已经把所有的后端搭建好了，我们就来搭建前端。</p>
+<blockquote>
+<p>偷懒小提示：可以直接Fork我的仓库，再在<del>Gayhub</del>（打错了不好意思）Github里面修改<code>config.json</code>文件即可。仓库地址：<a target="_blank" rel="noopener" href="https://github.com/HenryHe613/Oneindex_Serverless">Github传送门</a></p>
+</blockquote>
+<p><del>先下载必要文件：<a target="_blank" rel="noopener" href="https://drive.yelow.ga/#/?path=Public_Source/Blog/dd57">https://drive.yelow.ga/#/?path=Public_Source&#x2F;Blog&#x2F;dd57</a></del>前面的地址贼慢，换一个<a target="_blank" rel="noopener" href="https://share.yelow.ga/Blog/dd57/">下载地址_传送门</a>这里面的Front.zip。</p>
+<p>解压该文件，得到文件夹下两个文件：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712131713.png"></p>
+<p>好，我们不管index.html，我们配置config.json。</p>
+<p>打开config.json，给host赋值为HTTP触发器，如果你忘了，那么请你再看一下这张照片：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200712103506.png"></p>
+<p>配置完应该长这样，保存一下</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3808x.png" alt="U3808x.png"></p>
+<p>然后，我定义了自己的域名（drive.yelow.ga），我就加了一个CNAME，并用Git同步到Github的一个仓库里。</p>
+<p>仓库记得打开Pages，当然，Gitee和Coding也是可以用的。</p>
+<p>然后访问域名，会发现啥都没有。</p>
+<h2 id="连接Onedrive"><a href="#连接Onedrive" class="headerlink" title="连接Onedrive"></a>连接Onedrive</h2><p>在你刚打开的域名后面加上&#x2F;admin，（例如我的就是<a target="_blank" rel="noopener" href="https://drive.yelow.ga/#/admin%EF%BC%8C%E8%BF%99%E4%B8%AA#%E6%98%AF%E5%AE%83%E8%87%AA%E5%8A%A8%E4%BC%9A%E5%8A%A0%E7%9A%84%EF%BC%89">https://drive.yelow.ga/#/admin，这个#是它自动会加的）</a></p>
+<p>就到了管理界面。</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U38bZQ.png" alt="U38bZQ.png"></p>
+<p>对，就张这挫样。可能是用来迷惑的，右面的按钮设计成了搜索。</p>
+<p>输入你在阿里云里的密码。不不，不是Access的，是你在main.py里面的密码。</p>
+<p>进入了简洁的管理界面。</p>
+<p>如果Bucket没设置好，这里<code>对象储存</code>就会报错。由于我已经登陆了Onedrive，所以第三行就变绿了。</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3G8JI.png" alt="U3G8JI.png"></p>
+<p>绑定Onedrive，就在左侧<code>账号管理</code>。</p>
+<p><img src="https://s1.ax1x.com/2020/07/12/U3GsWq.png" alt="U3GsWq.png"></p>
+<p>但这个Oneindex-Serverless和Oneindex还是有很大差别的，Serverless版的只能下载，PHP的还有上传。</p>
+<p>最后，欢迎访问我的网盘hh，里面说不定有好东西哦！！！</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">主页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98"><span class="toc-number">1.</span> <span class="toc-text">阿里云免费建网盘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3Onedrive-Serverless"><span class="toc-number">3.</span> <span class="toc-text">了解Onedrive-Serverless</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAOnedrive-Serverless"><span class="toc-number">4.</span> <span class="toc-text">搭建Onedrive-Serverless</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E9%80%9A%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%82%A8%E5%AD%98OSS"><span class="toc-number">4.1.</span> <span class="toc-text">开通函数计算和对象储存OSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%82%A8%E5%AD%98OSS"><span class="toc-number">4.2.</span> <span class="toc-text">配置对象储存OSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEaccess%E5%AD%90%E8%B4%A6%E6%88%B7"><span class="toc-number">4.3.</span> <span class="toc-text">配置access子账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEServerless%E5%87%BD%E6%95%B0%E8%AE%A1%E7%AE%97"><span class="toc-number">4.4.</span> <span class="toc-text">配置Serverless函数计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="toc-number">4.5.</span> <span class="toc-text">前端配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5Onedrive"><span class="toc-number">4.6.</span> <span class="toc-text">连接Onedrive</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/posts/dd57.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/posts/dd57.html&text=阿里云免费建网盘"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/posts/dd57.html&is_video=false&description=阿里云免费建网盘"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阿里云免费建网盘&body=Check out this article: https://blog.nanyan666.com/posts/dd57.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/posts/dd57.html&title=阿里云免费建网盘"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/posts/dd57.html&name=阿里云免费建网盘&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/posts/dd57.html&t=阿里云免费建网盘"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    南岩666
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">主页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
