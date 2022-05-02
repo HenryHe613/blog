@@ -9,7 +9,7 @@
     <meta name="description" content="之前用win自带的记事本，功能太鸡肋了。啥都没有，而且最不能忍受的就是，微软的程序猿自己认为很聪明，给UTF-8加了BOM。 然后，许多代码出错emmm 直接上链接：这里，v7.8.5_x64 附上哈希值，怕CloudFlare的CDN啥时候抽了，下载出错： 123CRC32: 80A1EBD6MD5: CD8C07848895C989C81C9D88C8BFEA88SHA-1: 820C75A6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="史上最好用的编辑器">
-<meta property="og:url" content="https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/index.html">
+<meta property="og:url" content="https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/index.html">
 <meta property="og:site_name" content="南岩666のBlog">
 <meta property="og:description" content="之前用win自带的记事本，功能太鸡肋了。啥都没有，而且最不能忍受的就是，微软的程序猿自己认为很聪明，给UTF-8加了BOM。 然后，许多代码出错emmm 直接上链接：这里，v7.8.5_x64 附上哈希值，怕CloudFlare的CDN啥时候抽了，下载出错： 123CRC32: 80A1EBD6MD5: CD8C07848895C989C81C9D88C8BFEA88SHA-1: 820C75A6">
 <meta property="og:locale" content="zh_CN">
@@ -40,7 +40,7 @@
     <title>史上最好用的编辑器</title>
     <!-- styles -->
     
-<link rel="stylesheet" href="/blog/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
     <!-- persian styles -->
     
@@ -61,11 +61,11 @@
     <span id="nav">
       <ul>
         <!--
-       --><li><a href="/blog/">主页</a></li><!--
+       --><li><a href="/">主页</a></li><!--
      --><!--
-       --><li><a href="/blog/about/">关于</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/blog/archives/">归档</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
        --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
      --><!--
@@ -77,10 +77,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="上一篇" href="/blog/2020/05/10/%E7%94%B3%E8%AF%B7Freenom%E5%9F%9F%E5%90%8D%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%81%9A%E6%B3%95/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/2020/05/10/%E7%94%B3%E8%AF%B7Freenom%E5%9F%9F%E5%90%8D%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%81%9A%E6%B3%95/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="下一篇" href="/blog/2020/04/19/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8Github-Hexo/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/2020/04/19/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8Github-Hexo/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -93,17 +93,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&text=史上最好用的编辑器"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&is_video=false&description=史上最好用的编辑器"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=史上最好用的编辑器&body=Check out this article: https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&name=史上最好用的编辑器&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&t=史上最好用的编辑器"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&text=史上最好用的编辑器"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&is_video=false&description=史上最好用的编辑器"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=史上最好用的编辑器&body=Check out this article: https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&name=史上最好用的编辑器&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&t=史上最好用的编辑器"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -143,14 +143,14 @@
       
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/blog/categories/Software/">Software</a>
+        <a class="category-link" href="/categories/Software/">Software</a>
     </div>
 
 
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link-link" href="/blog/tags/NotePad/" rel="tag">NotePad++</a>
+        <a class="tag-link-link" href="/tags/NotePad/" rel="tag">NotePad++</a>
     </div>
 
 
@@ -180,11 +180,11 @@
     <div id="nav-footer" style="display: none">
       <ul>
          
-          <li><a href="/blog/">主页</a></li>
+          <li><a href="/">主页</a></li>
          
-          <li><a href="/blog/about/">关于</a></li>
+          <li><a href="/about/">关于</a></li>
          
-          <li><a href="/blog/archives/">归档</a></li>
+          <li><a href="/archives/">归档</a></li>
          
           <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
          
@@ -199,17 +199,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&text=史上最好用的编辑器"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&is_video=false&description=史上最好用的编辑器"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=史上最好用的编辑器&body=Check out this article: https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&name=史上最好用的编辑器&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&t=史上最好用的编辑器"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&text=史上最好用的编辑器"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&is_video=false&description=史上最好用的编辑器"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=史上最好用的编辑器&body=Check out this article: https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&title=史上最好用的编辑器"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&name=史上最好用的编辑器&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/05/03/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/&t=史上最好用的编辑器"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -237,11 +237,11 @@
     <nav>
       <ul>
         <!--
-       --><li><a href="/blog/">主页</a></li><!--
+       --><li><a href="/">主页</a></li><!--
      --><!--
-       --><li><a href="/blog/about/">关于</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/blog/archives/">归档</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
        --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
      --><!--
@@ -293,7 +293,7 @@
   </script>
 
 
-<script src="/blog/js/main.js"></script>
+<script src="/js/main.js"></script>
 
 <!-- search -->
 

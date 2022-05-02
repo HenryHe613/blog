@@ -9,7 +9,7 @@
     <meta name="description" content="阿里云免费建网盘前言我白嫖到了微软的25TB储存，但是下载不方便，想用这点容量搭一个网盘。 考虑到我没有可以使用的云服务器，所需就选择了Oneindex-Serverless。 看了阿里云官网的Oneindex-serverless搭建文档，踩了好几个坑。官方文档 然鹅阿里云的文章也不是自己写的。阿里嫖了知乎的一篇文章传送门  枯了枯了，网上还有很多文档，但是都是一摸一样的。 了解Onedrive">
 <meta property="og:type" content="article">
 <meta property="og:title" content="阿里云免费建网盘">
-<meta property="og:url" content="https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/index.html">
+<meta property="og:url" content="https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/index.html">
 <meta property="og:site_name" content="南岩666のBlog">
 <meta property="og:description" content="阿里云免费建网盘前言我白嫖到了微软的25TB储存，但是下载不方便，想用这点容量搭一个网盘。 考虑到我没有可以使用的云服务器，所需就选择了Oneindex-Serverless。 看了阿里云官网的Oneindex-serverless搭建文档，踩了好几个坑。官方文档 然鹅阿里云的文章也不是自己写的。阿里嫖了知乎的一篇文章传送门  枯了枯了，网上还有很多文档，但是都是一摸一样的。 了解Onedrive">
 <meta property="og:locale" content="zh_CN">
@@ -70,7 +70,7 @@
     <title>阿里云免费建网盘</title>
     <!-- styles -->
     
-<link rel="stylesheet" href="/blog/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
     <!-- persian styles -->
     
@@ -91,11 +91,11 @@
     <span id="nav">
       <ul>
         <!--
-       --><li><a href="/blog/">主页</a></li><!--
+       --><li><a href="/">主页</a></li><!--
      --><!--
-       --><li><a href="/blog/about/">关于</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/blog/archives/">归档</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
        --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
      --><!--
@@ -107,10 +107,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="上一篇" href="/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="下一篇" href="/blog/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/2020/07/11/%E5%88%A9%E7%94%A8Coding%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -123,17 +123,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&text=阿里云免费建网盘"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&is_video=false&description=阿里云免费建网盘"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=阿里云免费建网盘&body=Check out this article: https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&name=阿里云免费建网盘&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&t=阿里云免费建网盘"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&text=阿里云免费建网盘"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&is_video=false&description=阿里云免费建网盘"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阿里云免费建网盘&body=Check out this article: https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&name=阿里云免费建网盘&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&t=阿里云免费建网盘"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -173,14 +173,14 @@
       
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/blog/categories/Software/">Software</a>
+        <a class="category-link" href="/categories/Software/">Software</a>
     </div>
 
 
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link-link" href="/blog/tags/Onedrive/" rel="tag">Onedrive</a>, <a class="tag-link-link" href="/blog/tags/%E7%BD%91%E7%9B%98/" rel="tag">网盘</a>
+        <a class="tag-link-link" href="/tags/Onedrive/" rel="tag">Onedrive</a>, <a class="tag-link-link" href="/tags/%E7%BD%91%E7%9B%98/" rel="tag">网盘</a>
     </div>
 
 
@@ -298,11 +298,11 @@
     <div id="nav-footer" style="display: none">
       <ul>
          
-          <li><a href="/blog/">主页</a></li>
+          <li><a href="/">主页</a></li>
          
-          <li><a href="/blog/about/">关于</a></li>
+          <li><a href="/about/">关于</a></li>
          
-          <li><a href="/blog/archives/">归档</a></li>
+          <li><a href="/archives/">归档</a></li>
          
           <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
          
@@ -317,17 +317,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&text=阿里云免费建网盘"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&is_video=false&description=阿里云免费建网盘"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=阿里云免费建网盘&body=Check out this article: https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&name=阿里云免费建网盘&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&t=阿里云免费建网盘"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&text=阿里云免费建网盘"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&is_video=false&description=阿里云免费建网盘"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阿里云免费建网盘&body=Check out this article: https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&title=阿里云免费建网盘"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&name=阿里云免费建网盘&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.nanyan666.com/2020/07/12/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%BD%91%E7%9B%98/&t=阿里云免费建网盘"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -355,11 +355,11 @@
     <nav>
       <ul>
         <!--
-       --><li><a href="/blog/">主页</a></li><!--
+       --><li><a href="/">主页</a></li><!--
      --><!--
-       --><li><a href="/blog/about/">关于</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/blog/archives/">归档</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
        --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
      --><!--
@@ -411,7 +411,7 @@
   </script>
 
 
-<script src="/blog/js/main.js"></script>
+<script src="/js/main.js"></script>
 
 <!-- search -->
 
