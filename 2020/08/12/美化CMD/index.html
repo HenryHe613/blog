@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="先看效果图 这个Windows Terminal在美化PowerShell和CMD的同时，还可以用标签的方式集合多个命令行窗口。 安装方法打开Microsoft Store  右上角搜索Terminal。   点击获取。当然，我安装过了，所以会显示启动。  但是，你打开了Terminal之后，会发现和原来的命令行没什么两样哇！底色还是黑的。 美化方法在Terminal的导航栏内，点击Ⅴ图标，找到设">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美化CMD">
+<meta property="og:url" content="https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/index.html">
+<meta property="og:site_name" content="南岩666のBlog">
+<meta property="og:description" content="先看效果图 这个Windows Terminal在美化PowerShell和CMD的同时，还可以用标签的方式集合多个命令行窗口。 安装方法打开Microsoft Store  右上角搜索Terminal。   点击获取。当然，我安装过了，所以会显示启动。  但是，你打开了Terminal之后，会发现和原来的命令行没什么两样哇！底色还是黑的。 美化方法在Terminal的导航栏内，点击Ⅴ图标，找到设">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/c437f844dce8c.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/604eef4f46dbf.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/a17685c225948.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/99b50bb81d26e.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/b1a8bb46b2136.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/af87718c7ba5e.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/61ca48daad81c.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/12/faa1334a33309.png">
+<meta property="article:published_time" content="2020-08-12T03:18:45.000Z">
+<meta property="article:modified_time" content="2022-05-01T12:17:25.008Z">
+<meta property="article:author" content="南岩666">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.baixiongz.com/2020/08/12/c437f844dce8c.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+    
+    <!-- title -->
+    <title>美化CMD</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="الأعلى" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/blog/">主页</a></li><!--
+     --><!--
+       --><li><a href="/blog/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/blog/2020/08/12/MarkDown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/blog/2020/08/11/%E5%8F%91%E7%8E%B0Gridea%E8%BF%99%E5%9D%97%E6%96%B0%E5%A4%A7%E9%99%86/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&text=美化CMD"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&is_video=false&description=美化CMD"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=美化CMD&body=Check out this article: https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&name=美化CMD&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&t=美化CMD"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%88%E7%9C%8B%E6%95%88%E6%9E%9C%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">先看效果图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BE%8E%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">美化方法</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        美化CMD
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南岩666</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-08-12T03:18:45.000Z" itemprop="datePublished">2020-08-12</time>
+        
+        (Updated: <time datetime="2022-05-01T12:17:25.008Z" itemprop="dateModified">2022-05-01</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/blog/categories/Software/">Software</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/blog/tags/Windows/" rel="tag">Windows</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="先看效果图"><a href="#先看效果图" class="headerlink" title="先看效果图"></a>先看效果图</h1><p><img src="https://pic.baixiongz.com/2020/08/12/c437f844dce8c.png"></p>
+<p>这个<code>Windows Terminal</code>在美化<code>PowerShell</code>和<code>CMD</code>的同时，还可以用标签的方式集合多个命令行窗口。</p>
+<h1 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h1><p>打开<code>Microsoft Store</code></p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/604eef4f46dbf.png"></p>
+<p>右上角搜索<code>Terminal</code>。</p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/a17685c225948.png"></p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/99b50bb81d26e.png"></p>
+<p>点击<code>获取</code>。当然，我安装过了，所以会显示<code>启动</code>。</p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/b1a8bb46b2136.png"></p>
+<p>但是，你打开了<code>Terminal</code>之后，会发现和原来的命令行没什么两样哇！底色还是黑的。</p>
+<h1 id="美化方法"><a href="#美化方法" class="headerlink" title="美化方法"></a>美化方法</h1><p>在Terminal的导航栏内，点击<code>Ⅴ</code>图标，找到<code>设置</code>。这时候会弹出代码编辑。</p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/af87718c7ba5e.png"></p>
+<p>大约在30行的下方，添加如下代码：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;useAcrylic&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;acrylicOpacity&quot;</span><span class="punctuation">:</span> <span class="number">0.5</span></span><br></pre></td></tr></table></figure>
+
+<p>添加后的效果如下：</p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/61ca48daad81c.png"></p>
+<p><code>Ctrl</code>+<code>S</code>保存一下，打开<code>Terminal</code>，就出现了亚克力效果。</p>
+<p>如果要更透明一点，可以把<code>acrylicOpacity</code>的值调的小一点。但是不宜过小。0.1的时候效果就像下面一样了：</p>
+<p><img src="https://pic.baixiongz.com/2020/08/12/faa1334a33309.png"></p>
+<p>当然调的大一点没关系。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/blog/">主页</a></li>
+         
+          <li><a href="/blog/about/">关于</a></li>
+         
+          <li><a href="/blog/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%88%E7%9C%8B%E6%95%88%E6%9E%9C%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">先看效果图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BE%8E%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">美化方法</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&text=美化CMD"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&is_video=false&description=美化CMD"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=美化CMD&body=Check out this article: https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&title=美化CMD"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&name=美化CMD&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/08/12/%E7%BE%8E%E5%8C%96CMD/&t=美化CMD"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    南岩666
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/blog/">主页</a></li><!--
+     --><!--
+       --><li><a href="/blog/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/blog/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

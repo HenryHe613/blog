@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前言Vercel真是好。之前想用Travis CI部署博客，但是Travis CI不能用部署私仓，很不舒服。要知道我博客的源文件里也有些不可告人的东西。 别想多了，也就是Token之类的啦。 对于Zeit.co这个组织我早有耳闻，但是神奇的发现官网被重定向到了vercel.com。天真的我以为Zeit被攻击了，结果一查才知道这个组织名字改了。。。 然鹅，我注册Vercel总是不成功。即便我挂梯子，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vercel部署Hexo">
+<meta property="og:url" content="https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/index.html">
+<meta property="og:site_name" content="南岩666のBlog">
+<meta property="og:description" content="前言Vercel真是好。之前想用Travis CI部署博客，但是Travis CI不能用部署私仓，很不舒服。要知道我博客的源文件里也有些不可告人的东西。 别想多了，也就是Token之类的啦。 对于Zeit.co这个组织我早有耳闻，但是神奇的发现官网被重定向到了vercel.com。天真的我以为Zeit被攻击了，结果一查才知道这个组织名字改了。。。 然鹅，我注册Vercel总是不成功。即便我挂梯子，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200725191922.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/01/544f4eabeea77.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/01/f7bc4f63046c8.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/01/bcb810e536350.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/01/544f4eabeea77.png">
+<meta property="og:image" content="https://pic.baixiongz.com/2020/08/01/0cc67e5a1b47d.png">
+<meta property="article:published_time" content="2020-07-25T10:44:30.000Z">
+<meta property="article:modified_time" content="2022-05-01T12:17:25.000Z">
+<meta property="article:author" content="南岩666">
+<meta property="article:tag" content="Vercel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200725191922.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+    
+    <!-- title -->
+    <title>Vercel部署Hexo</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="الأعلى" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/blog/">主页</a></li><!--
+     --><!--
+       --><li><a href="/blog/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/blog/2020/08/02/E5-OneDrive%E6%89%A9%E5%AE%B9%E6%95%99%E7%A8%8B/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/blog/2020/07/24/%E7%99%BD%E5%AB%96%E5%85%9A-%E5%85%8D%E8%B4%B9%E7%A8%B3%E5%AE%9ASSR/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&text=Vercel部署Hexo"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&is_video=false&description=Vercel部署Hexo"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vercel部署Hexo&body=Check out this article: https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&name=Vercel部署Hexo&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&t=Vercel部署Hexo"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C"><span class="toc-number">2.</span> <span class="toc-text">注册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">3.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%B7%B2%E7%BB%8F%E6%9C%89%E4%BA%86Hexo%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">3.1.</span> <span class="toc-text">如果你已经有了Hexo的博客</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Vercel部署Hexo
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南岩666</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-07-25T10:44:30.000Z" itemprop="datePublished">2020-07-25</time>
+        
+        (Updated: <time datetime="2022-05-01T12:17:25.000Z" itemprop="dateModified">2022-05-01</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/blog/tags/Vercel/" rel="tag">Vercel</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Vercel真是好。之前想用Travis CI部署博客，但是Travis CI不能用部署私仓，很不舒服。要知道我博客的源文件里也有些不可告人的东西。</p>
+<p>别想多了，也就是Token之类的啦。</p>
+<p>对于Zeit.co这个组织我早有耳闻，但是神奇的发现官网被重定向到了vercel.com。天真的我以为Zeit被攻击了，结果一查才知道这个组织名字改了。。。</p>
+<p>然鹅，我注册Vercel总是不成功。即便我挂梯子，也不行。</p>
+<p>后来经大佬指导，才知道Vercel不能用qq.com的邮箱。我的GitHub绑定的就是qqmail，于是我改成了gmail，这才注册成功。</p>
+<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><p><a target="_blank" rel="noopener" href="https://vercel.com/">Vercel官网&#x3D;&#x3D;&gt;传送门</a></p>
+<p>点击右上角<code>Sign Up</code>，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200725191922.png"></p>
+<p>选择<code>Continue with GitHub</code>，利用GitHub登录。</p>
+<p>之后完善自己的个人信息。</p>
+<p><img src="https://pic.baixiongz.com/2020/08/01/544f4eabeea77.png" alt="TIM截图20200801184544.png"></p>
+<p>这是我的Vercel界面。</p>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="如果你已经有了Hexo的博客"><a href="#如果你已经有了Hexo的博客" class="headerlink" title="如果你已经有了Hexo的博客"></a>如果你已经有了Hexo的博客</h2><p>你可以右上角点击<code>Improt Project</code>，</p>
+<p><img src="https://pic.baixiongz.com/2020/08/01/f7bc4f63046c8.png" alt="TIM截图20200801174641.png"></p>
+<p>然后选择<code>Continue</code>，</p>
+<p><img src="https://pic.baixiongz.com/2020/08/01/bcb810e536350.png" alt="TIM截图20200801174752.png"></p>
+<p>填写你的博客的Git地址。注意，这里要用HTTPS的地址，不能用SSH的地址</p>
+<p><img src="https://pic.baixiongz.com/2020/08/01/544f4eabeea77.png" alt="TIM截图20200801184544.png"></p>
+<p><img src="https://pic.baixiongz.com/2020/08/01/0cc67e5a1b47d.png" alt="TIM截图20200801175155.png"></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/blog/">主页</a></li>
+         
+          <li><a href="/blog/about/">关于</a></li>
+         
+          <li><a href="/blog/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C"><span class="toc-number">2.</span> <span class="toc-text">注册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">3.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%B7%B2%E7%BB%8F%E6%9C%89%E4%BA%86Hexo%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">3.1.</span> <span class="toc-text">如果你已经有了Hexo的博客</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&text=Vercel部署Hexo"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&is_video=false&description=Vercel部署Hexo"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vercel部署Hexo&body=Check out this article: https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&title=Vercel部署Hexo"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&name=Vercel部署Hexo&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/07/25/Vercel%E9%83%A8%E7%BD%B2Hexo/&t=Vercel部署Hexo"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    南岩666
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/blog/">主页</a></li><!--
+     --><!--
+       --><li><a href="/blog/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/blog/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

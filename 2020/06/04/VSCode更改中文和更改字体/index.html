@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="VSCode更改中文前提是你得安装了VSCode。下载地址：传送门 最好是下载Stable版本的，Insiders版的可能会不稳定 安装好之后应该是英文的。网上的方法可能有点不适用，我介绍一下我的方法。 下载Chinese插件。传送门  在右侧点击Download Extension，下载VSIX扩展文件（类似Chromium的CRX）。 在VSCode插件栏中，右上角···，选择从VSIX安装，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VSCode更改中文和更改字体">
+<meta property="og:url" content="https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/index.html">
+<meta property="og:site_name" content="南岩666のBlog">
+<meta property="og:description" content="VSCode更改中文前提是你得安装了VSCode。下载地址：传送门 最好是下载Stable版本的，Insiders版的可能会不稳定 安装好之后应该是英文的。网上的方法可能有点不适用，我介绍一下我的方法。 下载Chinese插件。传送门  在右侧点击Download Extension，下载VSIX扩展文件（类似Chromium的CRX）。 在VSCode插件栏中，右上角···，选择从VSIX安装，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/20200604181411.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/20200604181846.png">
+<meta property="article:published_time" content="2020-06-04T09:02:59.000Z">
+<meta property="article:modified_time" content="2022-05-01T12:17:24.999Z">
+<meta property="article:author" content="南岩666">
+<meta property="article:tag" content="VSCode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/20200604181411.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/HenryHe613/Pic//20220403/202205020748156.jpg">
+        
+      
+    
+    <!-- title -->
+    <title>VSCode更改中文和更改字体</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="الأعلى" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/blog/">主页</a></li><!--
+     --><!--
+       --><li><a href="/blog/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/blog/2020/06/04/Valine%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%89%E8%A3%85/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/blog/2020/05/30/Loading/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&text=VSCode更改中文和更改字体"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&is_video=false&description=VSCode更改中文和更改字体"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VSCode更改中文和更改字体&body=Check out this article: https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&name=VSCode更改中文和更改字体&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&t=VSCode更改中文和更改字体"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87"><span class="toc-number">1.</span> <span class="toc-text">VSCode更改中文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VSCode%E5%AE%89%E8%A3%85JetBrainsMono-Bold%E5%AD%97%E4%BD%93%E3%80%82"><span class="toc-number">2.</span> <span class="toc-text">VSCode安装JetBrainsMono-Bold字体。</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        VSCode更改中文和更改字体
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南岩666</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-06-04T09:02:59.000Z" itemprop="datePublished">2020-06-04</time>
+        
+        (Updated: <time datetime="2022-05-01T12:17:24.999Z" itemprop="dateModified">2022-05-01</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/blog/categories/Software/">Software</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/blog/tags/VSCode/" rel="tag">VSCode</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="VSCode更改中文"><a href="#VSCode更改中文" class="headerlink" title="VSCode更改中文"></a>VSCode更改中文</h1><p>前提是你得安装了VSCode。下载地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">传送门</a></p>
+<p>最好是下载<code>Stable</code>版本的，<code>Insiders</code>版的可能会不稳定</p>
+<p>安装好之后应该是英文的。网上的方法可能有点不适用，我介绍一下我的方法。</p>
+<p>下载Chinese插件。<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans">传送门</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/20200604181411.png"></p>
+<p>在右侧点击<code>Download Extension</code>，下载VSIX扩展文件（类似Chromium的CRX）。</p>
+<p>在VSCode插件栏中，右上角···，选择<code>从VSIX安装</code>，选择刚刚下载的插件。</p>
+<p>重启一下VSCode，应该就变中文了。</p>
+<h1 id="VSCode安装JetBrainsMono-Bold字体。"><a href="#VSCode安装JetBrainsMono-Bold字体。" class="headerlink" title="VSCode安装JetBrainsMono-Bold字体。"></a>VSCode安装JetBrainsMono-Bold字体。</h1><p>我最喜欢JetBrainsMono-Bold的字体了。<a target="_blank" rel="noopener" href="https://share.yelow.ga/Font/JetBrainsMono-1.0.3.zip">下载地址_传送门</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/henryhe613/pic/20200604181846.png"></p>
+<p>VSCode中打开设置&#x3D;&gt;文本编辑器&#x3D;&gt;字体&#x3D;&gt;Font Family，</p>
+<p>改为<code>&#39;JetBrains Mono&#39;</code>.</p>
+<p>前提是你已经安装了JetBrainsMono-Bold字体。</p>
+<p>如果要使用其他字体，请先安装，再到控制面板里找到字体文件夹，确定字体在文件夹中的名字，再复制到VSCode。不然VSCode认不出来。我就栽在坑里爬了许久。</p>
+<p>这是我的配置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;editor.fontLigatures&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span><span class="comment">//这个控制是否启用字体连字，true启用，false不启用，JetBrains的连字很好看，我就true了</span></span><br><span class="line">    <span class="attr">&quot;editor.fontSize&quot;</span><span class="punctuation">:</span> <span class="number">20</span><span class="punctuation">,</span><span class="comment">//设置字体大小</span></span><br><span class="line">    <span class="attr">&quot;editor.fontWeight&quot;</span><span class="punctuation">:</span> <span class="string">&quot;normal&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;editor.fontFamily&quot;</span><span class="punctuation">:</span> <span class="string">&quot;JetBrains Mono&quot;</span><span class="punctuation">,</span> </span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/blog/">主页</a></li>
+         
+          <li><a href="/blog/about/">关于</a></li>
+         
+          <li><a href="/blog/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87"><span class="toc-number">1.</span> <span class="toc-text">VSCode更改中文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VSCode%E5%AE%89%E8%A3%85JetBrainsMono-Bold%E5%AD%97%E4%BD%93%E3%80%82"><span class="toc-number">2.</span> <span class="toc-text">VSCode安装JetBrainsMono-Bold字体。</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&text=VSCode更改中文和更改字体"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&is_video=false&description=VSCode更改中文和更改字体"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VSCode更改中文和更改字体&body=Check out this article: https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&title=VSCode更改中文和更改字体"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&name=VSCode更改中文和更改字体&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://henryhe613.github.io/blog/2020/06/04/VSCode%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%92%8C%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/&t=VSCode更改中文和更改字体"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    南岩666
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/blog/">主页</a></li><!--
+     --><!--
+       --><li><a href="/blog/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/atasgayb/">知乎</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HenryHe613/">Github</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/blog/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
